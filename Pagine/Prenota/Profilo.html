@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title> La Forchetta </title>
+        <meta http-equiv="content-type" content="text/html"; charset="iso-8859-1">
+        <meta name="generator" content="Hapedit 3.1">
+        <link href="..\Stilehome.css" type="text/css" rel="stylesheet">
+        <link rel="icon" href="..\favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="..\favicon.ico" type="image/x-icon" />
+        <style>
+           .parallaxcont{
+               /* The image used */
+               background-image: url("../Prenota/imgprenot.jpg");
+
+               /* Set a specific height */
+               min-height: 300px;
+
+               /* Create the parallax scrolling effect */
+               background-attachment: fixed;
+               background-position: center;
+               background-repeat: no-repeat;
+               background-size: cover;
+           }
+         </style>
+    </head>
+
+    <script type="text/javascript" src="Registrazione1.js"></script>
+
+    <body link="#EF494D" alink="#EF494D" vlink="#EF494D" onLoad="userup()">
+            <div id="header">
+                <img class"logo" src="..\logo.png">
+            </div>
+        <div class="main">
+
+          <div class="menu">
+              <table id="elenco" width="50%" border="0" align="center">
+                  <tr align="center">
+                      <td class="titoloelenco"><a href="..\Homepage\Homepage.html">Home</a></td>
+                      <td class="titoloelenco"><a href="..\Ristoranti\Ristoranti.html">Ristoranti</a></td>
+                      <td class="titoloelenco"><a href="..\Contatti\Contatti.html">Contatti</a></td>
+                      <td class="titoloelenco"><a href="..\Prenota\Sceltaristo.html">Prenota</a></td>
+                  </tr>
+              </table>
+          </div>
+
+          <div class="benvenuto">
+              <h2>Benvenuto,</h2>
+              <p>   se vuoi modificare i tuoi dati di seguito puoi cambiare i campi che desideri.</p>
+          </div>
+          <div class="prenotazione">
+              <table class="prenota" width="50%" border="0" align="center">
+                  <tr align="center">
+                      <td class="registro" align="left"><h3> Profilo </h3> </td>
+              </table>
+
+              <div class="parallaxcont">
+
+                      <table id="regform" width="35%" border="0" align="center">
+                          <tr><td id="pnome">Nome :     </td></tr>
+                          <tr><td id="pcognome">Cognome :       </td></tr>
+                          <tr><td id="pmail">Mail :     </td></tr>
+                          <tr><td id="pdata">Data di Nascita :  </td></tr>
+                          <tr><td id="ptelefono">Telefono :     </td></tr>
+                          <tr><td id="pindirizzo">Indirizzo :   </td></tr>
+                          <tr><td><br><br><button onclick="window.location.href='Modifica.html'">Modifica</button>
+                              <td><br><br><button onclick="logoutuser()">Logout</button></tr>
+                          <tr><td><br><button onclick="clean()">Pulisci Storage</button>
+                              <td><br><button onclick="window.location.href='Sceltaristo.html'">Prenota posti</button></tr>
+                      </table>
+
+            </div>
+
+        </div>
+    </div>
+    <div id="footer">
+        <table class="footer" width="100%">
+          <tr>
+              <td>
+                  <hr>
+                  <p>Diritti riservati</p>
+                  <p>Stefano Lazzaretti Brambilla</p>
+              </td>
+          </tr>
+      </table>
+    </div>
+
+    </body>
+</html>

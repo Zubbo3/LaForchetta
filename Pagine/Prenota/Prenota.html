@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title> La Forchetta </title>
+        <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+        <meta name="generator" content="HAPedit 3.1">
+        <link href="..\Stilehome.css" type="text/css" rel="stylesheet">
+        <link rel="icon" href="..\favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="..\favicon.ico" type="image/x-icon" />
+
+        <style>
+           .parallaxcont{
+               /* The image used */
+               background-image: url("../Prenota/imgprenot.jpg");
+
+               /* Set a specific height */
+               min-height: 300px;
+
+               /* Create the parallax scrolling effect */
+               background-attachment: fixed;
+               background-position: center;
+               background-repeat: no-repeat;
+               background-size: cover;
+           }
+         </style>
+    </head>
+    <script type="text/javascript" src="..\registrazione.js"></script>
+    <body link="#EF494D" alink="#EF494D" vlink="#EF494D">
+        <div id="header">
+                <img class"logo" src="..\logo.png">
+        </div>
+        <div class="main">
+
+          <div class="menu">
+              <table id="elenco" width="50%" border="0" align="center">
+                  <tr align="center">
+                      <td class="titoloelenco"><a href="..\Homepage\Homepage.html">Home</a></td>
+                      <td class="titoloelenco"><a href="..\Ristoranti\Ristoranti.html">Ristoranti</a></td>
+                      <td class="titoloelenco"><a href="..\Contatti\Contatti.html">Contatti</a></td>
+                      <td class="titoloelenco"><a href="..\Prenota\Sceltaristo.html">Prenota</a></td>
+                  </tr>
+              </table>
+          </div>
+
+          <div class="benvenuto">
+              <h2>Benvenuto,</h2>
+              <p>   se e' la prima volta che visiti la pagina <i>Registrati</i>, altrimenti torna alla Home e  <i>Accedi</i> usando le tue credenziali.
+          </div>
+          <div class="prenotazione">
+              <table class="prenota" width="50%" border="0" align="center">
+                  <tr align="center">
+                      <td class="registro" align="left"><h3> Registrati </h3> </td>
+              </table>
+
+              <div class="parallaxcont">
+
+                  <!--FORM INSERIMENTO REGISTRAZIONE-->
+                  <form id="campi" onsubmit="registration()">
+                      <table id="regform" width="50%" border="0" align="center">
+                          <tr><td>Nome * :</td>
+                              <td><input type="text" name="nome" id="fnome"></td></tr>
+                          <tr><td>Mail * :</td>
+                              <td><input type="text" name="mail" id="fmail"></td></tr>
+                          <tr><td>Password * :</td>
+                              <td><input type="password" name="pass" id="fpass"></td>
+                          <tr><td>Conferma Password * :</td>
+                              <td><input type="password" name="cpass" id="fcpass"></td>
+                          <tr><td>Telefono * :</td>
+                              <td><input type="number" name="telefono" id="ftelefono"></td></tr>
+                          <tr><td><br><br><button onclick="registrazione()">Registrati</button>
+                                  <a href="..\Prenota\Profilo.html"> Profilo</a>
+                          <tr><td><br><h5>* Campi obbligatori</h5></td></tr>
+                      </table>
+                  </form>
+                  <!--FINE FORM-->
+
+            </div>
+
+        </div>
+    </div>
+    <div id="footer">
+        <table class="footer" width="100%">
+          <tr>
+              <td>
+                  <hr>
+                  <p>Diritti riservati</p>
+                  <p>Stefano Lazzaretti Brambilla</p>
+              </td>
+          </tr>
+      </table>
+    </div>
+
+    </body>
+</html>

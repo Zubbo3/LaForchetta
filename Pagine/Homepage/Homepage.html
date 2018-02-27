@@ -1,0 +1,177 @@
+<html>
+    <head>
+        <title> La Forchetta </title>
+        <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+        <meta name="generator" content="Hapedit 3.1">
+        <link href="..\Stilehome.css" type="text/css" rel="stylesheet">
+        <link rel="icon" href="..\favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="..\favicon.ico" type="image/x-icon" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="..\Ristoranti.js"></script>
+        <script type="text/javascript" src="..\registrazione.js"></script>
+
+        <!--PARALLAX 3 IMG-->
+        <style>
+            .parallaxmilano{
+                /* The image used */
+                background-image: url("Immagini/risto1.jpg");
+
+                /* Set a specific height */
+                min-height: 500px;
+                min-width: 100%;
+
+                /* Create the parallax scrolling effect */
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .parallaxroma{
+                /* The image used */
+                background-image: url("Immagini/risto2.jpg");
+
+                /* Set a specific height */
+                min-height: 500px;
+                min-width: 100%;
+
+                /* Create the parallax scrolling effect */
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .parallaxnapoli{
+                /* The image used */
+                background-image: url("Immagini/risto3.jpg");
+
+                /* Set a specific height */
+                min-height: 500px;
+                min-width: 100%;
+
+                /* Create the parallax scrolling effect */
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+    </head>
+
+    <body link="#EF494D" alink="#EF494D" vlink="#EF494D" onload="utenteloggato()">
+      <div id="header">
+          <div class="nav-right">
+            <table>
+              <tr id="in1">
+                <td>Mail:</td>
+                <td><input id="inpnome" type="text" name="nome" id="fnome"></td>
+              </tr>
+              <tr id="in2">
+                  <td>Pass:</td>
+                  <td><input id="inppass" type="password" name="pass" id="fpass"></td>
+              </tr>
+              <tr id="in3">
+                <td><br><button id="accedi" onclick="accedi()">Accedi</button></td>
+                <td><br>altrimenti <a href="..\Prenota\Prenota.html"> Registrati</a></td>
+              </tr>
+              <tr id="in4">
+                <td><br><h4 id="scritta">Ciao, <span id="ciao"></span></h4></td>
+                <td><br><button id="logout" onclick="logoutuser()">Logout</button></td>
+                <td><br><button id ="Profilobool" onclick="location.href='../Prenota/Profilo.html'">Profilo</button></td>
+              </tr>
+            </table>
+          </div>
+
+          <img class"logo" src="..\logo.png">
+      </div>
+        <div class="main">
+
+            <div class="menu">
+                <table id="elenco" width="50%" border="0" align="center">
+                    <tr align="center">
+                        <td class="titoloelenco"><a href="Homepage.html">Home</a></td>
+            		    <td class="titoloelenco"><a href="..\Ristoranti\Ristoranti.html">Ristoranti</a></td>
+            		    <td class="titoloelenco"><a href="..\Contatti\Contatti.html">Contatti</a></td>
+        			    <td class="titoloelenco"><a href="..\Prenota\Sceltaristo.html">Prenota</a></td>
+                    </tr>
+    			      </table>
+            </div>
+
+
+
+            <!--CODICE SLIDER WEBKIT ANIMATION-->
+            <div id="slider" align="center"><ul>
+    				<li><image class="imgpross" src="..\Homepage\Immagini\sfondo1.jpg"></li>
+            <li><image class="imgpross" src="..\Homepage\Immagini\sfondo3.jpg"></li>
+    				<li><image class="imgpross" src="..\Homepage\Immagini\sfondo2.jpg"></li>
+    				</ul>
+            </div>
+            <!--FINE SLIDER-->
+            <div class="descr">
+                <table width="100%" border="0" align="center">
+                    <tr align="center">
+                        <td id="testo"> <p>Sempre al servizio del cliente, La Forchetta offre una vasta</p>
+                                        <p>scelta di bonta' provenienti direttamente dalla penisola nostrana.</p>
+                                        <p>I nostri ristoranti si trovano a Milano, Roma e Napoli.</p>
+                                        <p>Venite a trovarci.</p>
+                        </td>
+                    </tr>
+                </table>
+            </dir>
+
+            <div class="parallaxmilano"></div>
+            <div class="parallaxroma"></div>
+            <div class="parallaxnapoli"></div>
+
+            <br><br>
+
+            <table class="popup">
+              <h2>I nostri piatti</h2>
+              <tr>
+                <td><img class="myImg" src="../Homepage/Immagini/gallery1.jpg" onclick="slide()" alt="Tagliata di carne" width="300" height="200"></td>
+                <td><div style="width:100px;"></div></td>
+                <td><img class="myImg" src="../Homepage/Immagini/gallery2.jpg" onclick="slide()" alt="Fritto misto" width="300" height="200"></td>
+              </tr>
+            </table>
+            <table class="popup">
+              <tr>
+                <td><img class="myImg" src="../Homepage/Immagini/gallery3.jpg" onclick="slide()" alt="Spaghetti al ragu'" width="300" height="200"></td>
+                <td><div style="width:100px;"></div></td>
+                <td><img class="myImg" src="../Homepage/Immagini/gallery4.jpg" onclick="slide()" alt="Spaghetti allo scoglio" width="300" height="200"></td>
+              </tr>
+            </table>
+            <table class="popup">
+              <tr>
+                <td><img class="myImg" src="../Homepage/Immagini/gallery5.jpg" onclick="slide()" alt="Cotoletta alla milanese" width="300" height="200"></td>
+                <td><div style="width:100px;"></div></td>
+                <td><img class="myImg" src="../Homepage/Immagini/gallery6.jpg" onclick="slide()" alt="Risotto giallo" width="300" height="200"></td>
+              </tr>
+            </table>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+              <!-- The Close Button -->
+              <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+              <!-- Modal Content (The Image) -->
+              <img class="modal-content" id="img01">
+
+              <!-- Modal Caption (Image Text) -->
+              <div id="caption"></div>
+            </div>
+
+
+      <div id="footer">
+          <table class="footer" width="100%">
+              <tr>
+                  <td>
+                      <hr>
+                      <p>Diritti riservati</p>
+                      <p>Stefano Lazzaretti Brambilla</p>
+                  </td>
+              </tr>
+          </table>
+      </div>
+
+    </body>
+</html>

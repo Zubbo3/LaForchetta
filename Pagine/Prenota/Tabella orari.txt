@@ -1,0 +1,9 @@
+MILANO / ROMA / NAPOLI
+
+lunedi -> aperto / Napoli solo 21.00
+martedi -> chiuso
+mercoledi -> aperto / Roma solo 21.00
+giovedi -> aperto / Milano solo 19.00
+venerdi -> aperto 
+sabato -> aperto
+domenica -> aperto

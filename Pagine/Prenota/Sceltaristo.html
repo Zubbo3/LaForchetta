@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <title> La Forchetta </title>
+        <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+        <meta name="generator" content="Hapedit 3.1">
+        <link href="..\Stilehome.css" type="text/css" rel="stylesheet">
+        <link rel="icon" href="..\favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="..\favicon.ico" type="image/x-icon" />
+        <script type="text/javascript" src="..\RistorantiJson.js"></script>
+        <script type="text/javascript" src="..\Ristoranti.js"></script>
+
+        <style>
+           .parallaxcont{
+               /* The image used */
+               background-image: url("../Prenota/imgprenot.jpg");
+
+               margin-top: 35px;
+
+               /* Set a specific height */
+               height: 300px;
+
+               /* Create the parallax scrolling effect */
+               background-attachment: fixed;
+               background-position: center;
+               background-repeat: no-repeat;
+               background-size: cover;
+           }
+         </style>
+    </head>
+
+    <body link="#EF494D" alink="#EF494D" vlink="#EF494D" onload="showsearch()">
+            <div id="header">
+                <img class"logo" src="..\logo.png">
+            </div>
+        <div class="main">
+
+          <div class="menu">
+              <table id="elenco" width="50%" border="0" align="center">
+                  <tr align="center">
+                      <td class="titoloelenco"><a href="..\Homepage\Homepage.html">Home</a></td>
+                      <td class="titoloelenco"><a href="..\Ristoranti\Ristoranti.html">Ristoranti</a></td>
+                      <td class="titoloelenco"><a href="..\Contatti\Contatti.html">Contatti</a></td>
+                      <td class="titoloelenco"><a href="..\Prenota\Sceltaristo.html">Prenota</a></td>
+                  </tr>
+              </table>
+          </div>
+
+          <div class="parallaxcont">
+              <div id="image-search-scelta">
+                  <div class="text-search">
+
+                          <span class="main-title">Scegli il tuo ristorante</span>
+                          <table id="structure">
+                             <tr>
+                              <td><input id="search-input" type="text" name="searchText" placeholder="Citta', nome del ristorante" autocomplete="off" size="28px"></td>
+                              <td><select id="sdate">
+                                  <option value="lun">Lunedi'</option>
+                                  <option value="mar">Martedi'</option>
+                                  <option value="mer">Mercoledi'</option>
+                                  <option value="gio">Giovedi'</option>
+                                  <option value="ven">Venerdi'</option>
+                                  <option value="sab">Sabato</option>
+                                  <option value="dom">Domenica</option>
+                              </select></td>
+                              <td><select id="time" name="time">
+                                  <option value="19.00 - 21.00">19.00 - 21.00</option>
+                                  <option value="Dopo le 21.00">Dopo le 21.00</option>
+                              </select></td>
+                              <td><select id="pers" name="pers">
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>
+                                  <option value="6">6</option>
+                                  <option value="7">7</option>
+                                  <option value="8">8</option>
+                                  <option value="9">9</option>
+                                  <option value="10">10</option>
+                                  <option value="11">11</option>
+                                  <option value="12">12</option>
+                                  <option value="13">13</option>
+                                  <option value="14">14</option>
+                                  <option value="15">15</option>
+                                  <option value="16">16</option>
+                                  <option value="17">17</option>
+                                  <option value="18">18</option>
+                                  <option value="19">19</option>
+                                  <option value="20">20</option>
+                                  <option value="21">21</option>
+                                  <option value="22">22</option>
+                                  <option value="23">23</option>
+                                  <option value="24">24</option>
+                                  <option value="25">25</option>
+                                  <option value="28">26</option>
+                                  <option value="27">27</option>
+                                  <option value="28">28</option>
+                                  <option value="29">29</option>
+                                  <option value="30">30</option>
+                                  <option value="31">31</option>
+                                  <option value="32">32</option>
+                                  <option value="33">33</option>
+                                  <option value="34">34</option>
+                                  <option value="35">35</option>
+                                  <option value="36">36</option>
+                                  <option value="37">37</option>
+                                  <option value="38">38</option>
+                                  <option value="39">39</option>
+                                  <option value="40">40</option>
+                                  <option value="41">41</option>
+                                  <option value="42">42</option>
+                                  <option value="43">43</option>
+                                  <option value="44">44</option>
+                                  <option value="45">45</option>
+                                  <option value="46">46</option>
+                                  <option value="47">47</option>
+                                  <option value="48">48</option>
+                                  <option value="49">49</option>
+                                  <option value="50">50</option>
+                              </select></td>
+                              <td><button id="searchButton" formmethod="get" onclick="search()">Cerca</button></td>
+                            </tr>
+                          </table>
+
+
+                  </div>
+              </div>
+    </div>
+
+    <div id="title">
+        <h2>Risultati della ricerca</h2>
+        <h4>Fare click sul ristorante per maggiori informazioni</h4>
+    </div>
+
+    <div id="restaurants"></div>
+    <div id="footer">
+        <table class="footer" width="100%">
+          <tr>
+              <td>
+                  <hr>
+                  <p>Diritti riservati</p>
+                  <p>Stefano Lazzaretti Brambilla</p>
+              </td>
+          </tr>
+      </table>
+    </div>
+
+    </body>
+</html>
